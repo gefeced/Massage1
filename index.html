@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Relaxation & Massage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/storage.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/music.js" defer></script>
+    <script src="js/state.js" defer></script>
+    <script src="js/views.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <noscript>
+      <div class="noscript">
+        This gift needs JavaScript enabled to run.
+      </div>
+    </noscript>
+
+    <div class="app" id="app">
+      <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+        <div class="sidebar__inner">
+          <div class="brand" role="banner">
+            <div class="brand__title">Massage</div>
+            <div class="brand__subtitle">for Mary</div>
+          </div>
+
+          <nav class="nav" aria-label="Pages">
+            <button class="nav__item" type="button" data-route="home" title="Home">
+              <span class="nav__label">Home</span>
+            </button>
+            <button class="nav__item" type="button" data-route="massages" title="Massages">
+              <span class="nav__label">Massages</span>
+            </button>
+            <button class="nav__item" type="button" data-route="credits" title="Credits">
+              <span class="nav__label">Credits</span>
+            </button>
+            <button class="nav__item" type="button" data-route="music" title="Music">
+              <span class="nav__label">Music</span>
+            </button>
+            <button class="nav__item" type="button" data-route="settings" title="Settings">
+              <span class="nav__label">Settings</span>
+            </button>
+          </nav>
+
+          <div class="sidebar__footer">
+            <div class="sidebar__hint">Lithuim</div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main" aria-label="Content">
+        <header class="topbar">
+          <div class="topbar__left">
+            <button
+              class="topbar__menu btn btn--ghost"
+              id="mobileMenuBtn"
+              type="button"
+              aria-label="Open menu"
+              aria-controls="sidebar"
+              aria-expanded="false"
+            >
+              Menu
+            </button>
+            <div class="topbar__crumb" id="crumb">Home</div>
+          </div>
+          <div class="topbar__right">
+            <div class="credits-pill" aria-label="Credit balance">
+              Credits:
+              <span id="creditsValue">0</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="view" id="view" tabindex="-1"></div>
+        </div>
+
+        <div class="toast-root" id="toastRoot" aria-live="polite" aria-atomic="true"></div>
+      </main>
+    </div>
+
+    <div class="modal-root" id="modalRoot" aria-live="polite"></div>
+  </body>
+</html>
